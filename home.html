@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body class="home">
+
+<header class="barra-topo">
+  <!-- linha vermelha do topo -->
+  <div class="linha-vermelha"></div>
+
+  <nav class="barra-icones">
+  
+  <!-- HOME (lado esquerdo) -->
+  <a href="home.html" class="icone-home">
+    <img src="img/casa.png" alt="Home">
+  </a>
+
+  <!-- ÍCONES CENTRAIS (lado direito) -->
+  <div class="icones-centrais d-flex justify-content-end align-items-start p-4">
+    <a href="historia.html">
+      <img src="img/coracao.png" alt="Tudo sobre nós">
+    </a>
+
+    <a href="tempo.html">
+      <img src="img/ampulheta.png" alt="Momentos">
+    </a>
+
+    <a href="lugares.html">
+      <img src="img/localizacao.png" alt="Lugares">
+    </a>
+
+    <a href="playlist.html">
+      <img src="img/nota musical.png" alt="Músicas">
+    </a>
+  </div>
+
+</header>
+
+<div class="container conteudo-principal">
+ <div class="row align-items-center secao-principal">
+ 
+    <div class="col-md-6 texto-titulo">
+      <h1>
+        DOIS<br>
+        ANOS DE<br>
+        NÓS: DOIS<br>
+        QUE SE<br>
+        TRANSFORMOU<br>
+        EM UM!
+      </h1>
+    </div>
+
+    <div class="col-md-6 text-center">
+
+  <div class="bloco-dois">
+    <div class="fundo-wrapper">
+  <img src="img/p&b.png" class="fundo-dois">
+
+   <div class="numero-dois">
+  <div class="linha-principal">2x</div>
+  <div class="linha-secundaria">de 365 dias e contando..</div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+
+<!-- linha vermelha inferior -->
+<div class="linha-vermelha linha-inferior"></div>
+
+<!-- Parte de baixo da tela -->
+<div class="container mt-5 mb-5 instrucoes">
+
+  <!-- CARD 1: INSTRUÇÕES -->
+  <div class="card mb-5">
+    <div class="card-body text-center">
+
+      <p class="fs-1 fw-semibold inst">Instruções</p>
+      <p class="fs-4">
+        Para melhor orientação, a seguir há um breve resumo do que cada próxima aba representa
+      </p>
+
+      <div class="d-flex justify-content-center gap-2 flex-wrap mt-3">
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse1">Coração</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse2">Ampulheta</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse3">Localizações</button>
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapse4">Nota musical</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ACCORDION -->
+  <div id="accordionExample">
+
+    <div class="collapse" id="collapse1" data-bs-parent="#accordionExample">
+      <div class="card card-body text-center">Conteúdo do primeiro</div>
+    </div>
+
+    <div class="collapse" id="collapse2" data-bs-parent="#accordionExample">
+      <div class="card card-body text-center">Conteúdo do segundo</div>
+    </div>
+
+    <div class="collapse" id="collapse3" data-bs-parent="#accordionExample">
+      <div class="card card-body text-center">Conteúdo do terceiro</div>
+    </div>
+
+    <div class="collapse" id="collapse4" data-bs-parent="#accordionExample">
+      <div class="card card-body text-center">Conteúdo do quarto</div>
+    </div>
+
+  </div>
+
+  <!-- CARD 2: QUOTE -->
+  <div class="card mt-4 card-quote">
+    <div class="card-header">Mensagem da criadora.</div>
+    <div class="card-body text-center">
+      <blockquote class="blockquote mb-0">
+        <p>Este site foi criado com a intenção de ser uma forma mais autêntica de me declarar e registrar, de todas as formas possíveis, o que sinto por você. Agora, com ele finalizado, pode parecer um presente simples… mas saiba que suei muito para chegar a esse resultado. E, convenhamos, ele tem lá seu toque de cafonice. Mas o que é o amor sem ela, não é mesmo?
+
+Espero, de coração, que você desfrute de todas as abas, cliques e textos pensando na gente. Este site foi pensado especialmente para você, meu amor. Aproveita! Eu te amo.</p>
+        <footer class="blockquote-footer">
+          Seu amor, <cite> Maria Cecilia.</cite>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>
+
+</html>

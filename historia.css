@@ -1,0 +1,92 @@
+.linha-vermelha {
+  height: 16px;
+  background-color: #e23535e1;
+  width: 100%;
+  width: 100vw;
+}
+.barra-icones {
+  display: flex;
+  align-items: center;           /* mesma altura */
+  justify-content: space-between;
+  padding: 25px 40px;
+}
+
+.icones-centrais {
+  display: flex;
+  gap: 20px;
+}
+
+.barra-icones img {
+  width: 24px;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.barra-icones img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+.linha-inferior {
+ position: fixed;       /* fixa na tela */
+  bottom: 0;             /* na parte inferior */
+  left: 0;
+  width: 100%;           /* ocupa toda a largura */
+  height: 16px;           /* altura da tira, você pode ajustar */
+  background-color:#e23535e1; /* cor da tira */
+  z-index: 1000; 
+}
+
+
+/* Parágrafos do lado da imagem */
+.col-md-6 p {
+  font-size: 1rem;      /* 16px */
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+/* Títulos e subtítulos do lado da imagem */
+.col-md-6 h2 {
+  font-size: 1.75rem;   /* 28px */
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.col-md-6 h4 {
+  font-size: 1.25rem;   /* 20px */
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+/* Estilo da imagem */
+.col-md-6 img {
+  border-radius: 10px;  /* arredondamento das bordas */
+}
+
+.bordacolorida1{
+   border: 3px solid #e34242;  /* cor da borda */
+  border-radius: 15px;        /* bordas arredondadas */
+  padding: 20px;              /* espaço interno */
+  background-color: #f8f0e3;
+
+} 
+
+.bordacolorida2{
+   border: 3px solid #d23434;  /* cor da borda */
+  border-radius: 15px;        /* bordas arredondadas */
+  padding: 20px;              /* espaço interno */
+  background-color: #f8f0e3;
+
+} 
+
+.bordacolorida3{
+   border: 3px solid #d02525;  /* cor da borda */
+  border-radius: 15px;        /* bordas arredondadas */
+  padding: 20px;              /* espaço interno */
+  background-color: #f8f0e3;
+
+} 

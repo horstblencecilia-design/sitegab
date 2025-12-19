@@ -1,0 +1,258 @@
+.linha-vermelha {
+  height: 16px;
+  background-color: #e23535e1;
+  width: 100%;
+  width: 100vw;
+}
+
+
+.texto-titulo h1 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+
+  font-size: 80px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+
+  color: #000;
+
+  margin-top: 40px;
+
+  letter-spacing: 1px;
+
+}
+
+@media (max-width: 768px) {
+  .texto-titulo h1 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+}
+
+
+.bloco-dois {
+  display: flex;
+  justify-content: center;
+}
+
+.fundo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+.fundo-dois {
+  width: 100%;
+  display: block;
+  border-radius: 40px;
+
+  mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+}
+
+.fundo-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    white 100%
+  );
+  pointer-events: none;
+}
+
+.numero-dois {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  pointer-events: none;
+  color: #000;
+}
+
+/* 2x grandão */
+.linha-principal {
+  font-family: "Playfair Display", serif;
+  font-size: 180px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 0.9;
+}
+
+/* texto menor */
+.linha-secundaria {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .linha-principal {
+    font-size: 120px;
+  }
+}
+
+.linha-principal {
+  font-family: "Playfair Display", serif;
+  font-size: 180px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 0.9;
+
+  color: #fff;
+  opacity: 0.9;
+}
+
+.linha-secundaria {
+  font-family: "Playfair Display", serif !important;
+  font-style: italic !important;
+  font-weight: 500;
+
+  font-size: 26px;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+
+  color: #fff !important;
+  opacity: 0.8;
+}
+
+.secao-principal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+   position: relative;
+}
+
+.secao-principal .row {
+  min-height: 100vh;
+}
+
+.linha-inferior {
+ position: fixed;       /* fixa na tela */
+  bottom: 0;             /* na parte inferior */
+  left: 0;
+  width: 100%;           /* ocupa toda a largura */
+  height: 16px;           /* altura da tira, você pode ajustar */
+  background-color:#e23535e1; /* cor da tira */
+  z-index: 1000; 
+}
+
+.instrucoes {
+  padding: 2rem 0;
+  background: transparent; /* importante */
+  padding: 2rem;
+  padding: 40px 20px;        /* espaçamento interno */
+  border-radius: 10px;       /* cantos arredondados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.033); /* sombra leve */
+}
+
+.inst {
+  font-size: 3rem;       /* tamanho grande para desktop */
+  font-weight: 600;      /* mantém o negrito */
+  text-align: center;    /* centraliza o texto */
+  color: #333;           /* cor do texto, pode mudar */
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .inst {
+    font-size: 2.5rem;  /* tamanho reduzido em telas médias */
+  }
+}
+
+/* Celulares */
+@media (max-width: 576px) {
+  .inst {
+    font-size: 2rem;    /* tamanho ainda menor para telas pequenas */
+  }
+}
+
+
+.btn-custom{
+  text-align: center; /* centraliza tudo dentro da div */
+  margin-top: 20px;  /* espaço acima opcional */
+
+}
+
+/* botão fechado */
+.btn[data-bs-toggle="collapse"].collapsed {
+  background-color: #ca2929; /* azul padrão */
+  border-color: #766d87;
+}
+
+/* botão ativo (aberto) */
+.btn[data-bs-toggle="collapse"]:not(.collapsed) {
+  background-color: #df5757; /* roxo */
+  border-color: #766d87;
+}
+
+.card-quote {
+  border-radius: 12px;
+  border: 2px solid #b00000;
+
+
+}
+
+/* esconder o ícone home somente na página inicial */
+.home .icone-home {
+  display: none;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .barra-icones {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .icones-centrais {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .barra-icones img {
+    width: 22px;
+  }
+}
+
+.icones-centrais {
+  display: flex;
+  gap: 20px;
+}
+
+.barra-icones img {
+  width: 24px;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.barra-icones img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

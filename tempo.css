@@ -1,0 +1,39 @@
+.linha-vermelha {
+  height: 16px;
+  background-color: #e23535e1;
+  width: 100%;
+  width: 100vw;
+}
+.barra-icones {
+  display: flex;
+  align-items: center;           /* mesma altura */
+  justify-content: space-between;
+  padding: 25px 40px;
+}
+
+.icones-centrais {
+  display: flex;
+  gap: 20px;
+}
+
+.barra-icones img {
+  width: 24px;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.barra-icones img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+.linha-inferior {
+ position: fixed;       /* fixa na tela */
+  bottom: 0;             /* na parte inferior */
+  left: 0;
+  width: 100%;           /* ocupa toda a largura */
+  height: 16px;           /* altura da tira, você pode ajustar */
+  background-color:#e23535e1; /* cor da tira */
+  z-index: 1000; 
+}
