@@ -37,3 +37,194 @@
   background-color:#e23535e1; /* cor da tira */
   z-index: 1000; 
 }
+
+/* ----------------- Título e subtítulo ----------------- */
+.titulo-principal, .subtitulo {
+  text-align: center;
+  width: 100%;
+  margin: 20px 0 30px 0;
+}
+
+.titulo-principal {
+  font-size: 2.5em;
+}
+
+.subtitulo {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* ----------------- Container principal ----------------- */
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px 40px;/* menos padding vertical */
+  min-height: 0vh;
+  font-family: Arial, sans-serif;
+  align-items: flex-start;
+  margin-bottom: 45px; /* separa a próxima seção */
+  margin: 20px auto; 
+ max-width: 1200px;  /* largura máxima */
+  margin: 20px auto;  /* centraliza e dá espaço vertical */
+  padding: 0 20px;    /* distância das laterais internas */
+  display: flex;
+  gap: 20px;
+}
+
+/* ----------------- Lista de cidades ----------------- */
+.lista-cidades {
+  width: 35%;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.lista-cidades h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+/* Labels como botões */
+.lista-cidades label {
+  display: block;
+  padding: 10px 15px;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.lista-cidades label:hover {
+  background-color: #e25555;
+  transform: scale(1.02);
+}
+
+/* Botão azul quando selecionado */
+#chapeco:checked ~ .main-container .lista-cidades label[for="chapeco"],
+#curitiba:checked ~ .main-container .lista-cidades label[for="curitiba"],
+#guarani:checked ~ .main-container .lista-cidades label[for="guarani"],
+#guarapuava:checked ~ .main-container .lista-cidades label[for="guarapuava"] {
+  background-color: #e25555;
+  color: white;
+}
+
+/* ----------------- Carrossel ----------------- */
+.carrossel {
+  flex: 0 0 65%; /* largura do carrossel */
+  height: 250px; /* altura fixa */
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagens sobrepostas, proporcionais e com fade */
+.carrossel img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, box-shadow 0.3s;
+  z-index: 0;
+}
+
+/* Mostrar imagem correspondente ao input selecionado */
+#chapeco:checked ~ .main-container .carrossel #img-chapeco,
+#curitiba:checked ~ .main-container .carrossel #img-curitiba,
+#guarani:checked ~ .main-container .carrossel #img-guarani,
+#guarapuava:checked ~ .main-container .carrossel #img-guarapuava {
+  opacity: 1;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ----------------- Inputs escondidos ----------------- */
+input[type="radio"] {
+  display: none;
+}
+
+/* ----------------- Responsivo ----------------- */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* lista abaixo do carrossel */
+    align-items: center;
+  }
+
+  .lista-cidades {
+    width: 90%; /* lista ocupa quase toda a largura */
+    margin-bottom: 20px;
+  }
+
+  .carrossel {
+    width: 90%; /* carrossel ocupa quase toda a largura */
+    height: 200px; /* altura menor em celular */
+  }
+}
+
+
+/* Carrossel invertido com altura fixa e imagens do mesmo tamanho */
+.main-container.invertida .carrossel {
+  flex: 0 0 65%;         /* largura do carrossel */
+  height: 250px;         /* altura fixa */
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-start; /* imagens encostam na borda superior */
+  justify-content: center;
+  padding: 0 10px;       /* distância das laterais */
+}
+
+/* Imagens do carrossel */
+.main-container.invertida .carrossel img {
+  position: absolute;
+  top: 0;                     /* encosta no topo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 100%;               /* altura igual ao carrossel */
+  max-width: 100%;            /* nunca ultrapassa o container */
+  object-fit: contain;        /* mantém proporção */
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, box-shadow 0.3s;
+  z-index: 0;
+}
+
+/* Mostrar imagem selecionada */
+#berlim2:checked ~ .main-container.invertida .carrossel #img-berlim2,
+#cidmexico2:checked ~ .main-container.invertida .carrossel #img-cidmexico2,
+#lisboa2:checked ~ .main-container.invertida .carrossel #img-lisboa2,
+#madrid2:checked ~ .main-container.invertida .carrossel #img-madrid2 {
+  opacity: 1;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.main-container + .main-container {
+  margin-top: 10px; /* diminua esse valor para aproximar mais */
+}
+
+.main-container {
+  border: 2px solid #ff3333; /* cor da borda */
+  border-radius: 10px;        /* borda arredondada */
+  padding: 20px;
+}
+
+
+
+
+

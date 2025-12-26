@@ -37,3 +37,95 @@
   background-color:#e23535e1; /* cor da tira */
   z-index: 1000; 
 }
+
+/* CARD */
+.flip-card {
+  width: 100%;
+  height: 260px;
+  perspective: 1000px;
+  cursor: pointer;
+  display: block;
+}
+
+/* altura menor no celular */
+@media (max-width: 576px) {
+  .flip-card {
+    height: 220px;
+  }
+}
+
+/* checkbox invisível */
+.flip-checkbox {
+  display: none;
+}
+
+/* animação */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* gira no clique */
+.flip-checkbox:checked + .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* frente */
+.flip-card-front {
+  background-color: #e6e6e6;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid #c0392b;
+}
+
+/* verso */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* imagem responsiva */
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* botão da linha do tempo */
+.btn-linha-tempo {
+  transition: all 0.3s ease;
+}
+
+/* quando clicar */
+.btn-linha-tempo:active,
+.btn-linha-tempo:focus {
+  background-color: #c0392b; /* vermelho */
+  border-color: #c0392b;
+  color: #fff;
+}
+
+/* opcional: hover suave */
+.btn-linha-tempo:hover {
+  background-color: #d87b7b;
+  border-color: #d87b7b;
+  color: #fff;
+}
+
